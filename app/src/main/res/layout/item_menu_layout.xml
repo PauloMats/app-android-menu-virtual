@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/item_menu_card_view"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/primary"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="10dp"
+    android:elevation="10dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<LinearLayout
+    android:id="@+id/item_menu_linear_container"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primary">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_menu_image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/prato_01">
+
+    </com.google.android.material.imageview.ShapeableImageView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_menu_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:elevation="10dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18sp">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+</LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
