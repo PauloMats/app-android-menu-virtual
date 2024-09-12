@@ -1,85 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/detail_scroll_view"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/primary">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/detail_scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/detail_linear_container"
-        android:orientation="vertical"
-        android:padding="15dp">
+        android:layout_height="match_parent"
+        android:background="@color/primary">
 
-        <com.google.android.material.button.MaterialButton
+        <LinearLayout
+            android:id="@+id/detail_linear_container"
+            android:background="@color/primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/detail_back"
-            android:background="@color/secondary"
-            android:textColor="@color/white"
-            app:icon="@drawable/arrow_back"
-            android:text="@string/back">
-        </com.google.android.material.button.MaterialButton>
+            android:orientation="vertical"
+            android:padding="15dp">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/detail_logo"
-            android:src="@drawable/logo"
-            android:layout_marginStart="20dp">
-        </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/detail_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/secondary"
+                android:textColor="@color/white"
+                app:icon="@drawable/arrow_back"
+                app:iconTint="@color/white"
+                android:text="@string/back">
+            </com.google.android.material.button.MaterialButton>
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/detail_title"
-            android:layout_marginEnd="20dp"
-            android:layout_gravity="center"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="22sp">
-        </com.google.android.material.textview.MaterialTextView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/detail_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/logo">
+            </com.google.android.material.imageview.ShapeableImageView>
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/detail_image"
-            android:layout_marginBottom="10dp"
-            android:maxHeight="180dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/prato_01">
-        </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:textSize="22sp"
+                android:text="@string/detail_text"
+                android:textColor="@color/white"
+                android:textStyle="bold">
+            </com.google.android.material.textview.MaterialTextView>
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/detail_name"
-            android:layout_marginEnd="10dp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="18sp">
-        </com.google.android.material.textview.MaterialTextView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/prato_01"
+                android:scaleType="centerCrop">
+            </com.google.android.material.imageview.ShapeableImageView>
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/detail_description"
-            android:layout_marginEnd="10dp"
-            android:layout_gravity="center"
-            android:textColor="@color/gray"
-            android:textSize="18sp">
-        </com.google.android.material.textview.MaterialTextView>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/detail_name"
+                android:textColor="@color/white"
+                android:textStyle="bold">
+            </com.google.android.material.textview.MaterialTextView>
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/detail_price"
-            android:layout_marginEnd="10dp"
-            android:layout_gravity="center"
-            android:textColor="@color/Tertiary"
-            android:textSize="18sp">
-        </com.google.android.material.textview.MaterialTextView>
-    </LinearLayout>
-</ScrollView>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/detail_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/detail_description"
+                android:textSize="18sp"
+                android:textColor="@color/gray">
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/detail_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/Tertiary">
+            </com.google.android.material.textview.MaterialTextView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
